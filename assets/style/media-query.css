@@ -1,0 +1,123 @@
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .short-about-us {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        text-align: center;
+    }
+    .short-info {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 80px 30px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 60px 30px;
+    }
+    .about-us-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .about-us-layout-img {
+        justify-content: center;
+    }
+
+    .about-us-layout-img-small {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #mobileNav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--bg-color);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    #mobileNav.open {
+        display: flex;
+    }
+
+    #mobileNav a {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    }
+
+    .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(12px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px);
+    }
+
+    .header-image h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .header-image p {
+        font-size: 14px;
+    }
+
+    .short-about-us,
+    .short-info,
+    .services,
+    footer {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .short-info {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .services-header {
+        padding: 0 30px;
+        margin-top: 40px;
+    }
+}
