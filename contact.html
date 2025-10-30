@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Štamparija Vinjeta Derventa - ofset i digitalna štampa, grafički dizajn i izrada ambalaže">
+        <meta name="keywords" content="štamparija, vinjeta, štampa, dizajn, Derventa, ofset, digitalna štampa, ambalaža, štanc alat, štanc alati">
+        <meta name="author" content="Vinjeta Derventa">
+        
+        <title>Kontakt | Vinjeta</title>
+
+        <link rel="stylesheet" href="assets/style/style.css">
+        <link rel="stylesheet" href="assets/style/media-query.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" href="assets/image/favicon.svg" type="image/x-icon">
+
+        <script src="assets/script/script.js" defer></script>
+    </head>
+    
+    <body>
+        <main class="container">
+            <header>
+                <div class="header-nav">
+                    <a href="index.html">
+                        <img class="header-nav-logo" src="assets/image/logo.svg" alt="Logo firme">
+                    </a>
+
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <nav id="mobileNav">
+                        <a href="index.html">Početna</a>
+                        <a href="about-us.html">O nama</a>
+                        <a href="services.html">Usluge</a>
+                        <a href="contact.html" class="active">Kontakt</a>
+                    </nav>
+                </div>
+            </header>
+
+            <form class="contact-form fade-in" action="send.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <h1>Kontaktirajte nas</h1>
+
+                <label for="naziv">Ime i prezime | Naziv firme/kompanije</label>
+                <input type="text" name="naziv" id="naziv" placeholder="Unesite Vaše ime ili ime firme/kompanije" required>
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Unesite Vašu email adresu" required>
+
+                <label for="poruka">Poruka</label>
+                <textarea name="poruka" id="poruka" placeholder="Vaša poruka ..." required></textarea>
+
+                <label for="prilog">Prilog <span class="formats">(PDF, DOC, JPG, PNG, ...)</span></label>
+                <input type="file" name="prilog[]" id="prilog" accept=".txt,.pdf,.doc,.docx,.jpg,.jpeg,.png,.svg,.xlsx,.ai" multiple>
+
+                <button type="submit">Pošalji</button>
+                <p class="contact-note">NAPOMENA: Na cijenu proizvoda utiču različiti faktori, poput tiraža (količine), broja boja, formata, vrste papira i dorade. Kako bismo Vam pripremili tačnu ponudu, molimo Vas da u poruci navedete što više detalja o željenom proizvodu.</p>
+            </form>
+        </main>
+    </body>
+</html>
